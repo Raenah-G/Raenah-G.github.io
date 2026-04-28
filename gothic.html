@@ -1,0 +1,186 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gothic Collection | Aurevienne</title>
+    <link rel="stylesheet" href="gothic.css"> </head>
+<body>
+
+<nav>
+  <div class="logo">Aurevienne</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="disney.html">Disney</a>
+    <a href="bridgerton.html">Bridgerton</a>
+    <a href="mythology.html">Mythology</a>
+    <a href="gothic.html" class="active">Gothic</a>
+    <a href="about.html">About</a>
+  </div>
+  <button class="cart-btn" onclick="openCart()">
+    Bag (<span id="cart-count">0</span>)
+  </button>
+</nav>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-top">
+    <h3>Your Bag</h3>
+    <button onclick="closeCart()">&#x2715;</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="total-price">&#8369;0</strong>
+    </div>
+    <button class="checkout-btn" onclick="document.getElementById('checkout-form-wrap').classList.toggle('show')">Checkout</button>
+    <div class="checkout-form-wrap" id="checkout-form-wrap">
+      <form action="http://52.74.133.173/cs3/checkout.php" method="POST">
+        <input type="text" name="cust_name" id="cust_name" placeholder="Full Name" required>
+        <input type="email" name="cust_email" id="cust_email" placeholder="Email Address" required>
+        <input type="text" name="cust_addr" id="cust_addr" placeholder="Delivery Address" required>
+        <input type="hidden" name="cust_order" id="cust_order" value="[]">
+        <input type="hidden" name="cust_total" id="cust_total" value="0">
+        <button type="submit" class="place-order-btn">Place Order</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="gothic-hero">
+  <div class="hero-text">
+    <p class="tag" style="color: #d4af37;">THE COLLECTION</p>
+    <h1>Gothic<br><em>Elegance</em></h1>
+    <p class="sub">Shadows, lace, and timeless mystery.</p>
+  </div>
+</section>
+
+<div class="gold-barrier">
+  <span>The Midnight Chapter</span>
+</div>
+
+<section class="section gothic-dark-bg">
+  <div class="prod-grid">
+    <div class="prod-card gothic-card">
+      <div class="prod-img"><div style="
+  width:100%;
+  height:280px;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.2), rgba(34, 8, 51, 0.5)), url('https://i.pinimg.com/736x/5b/28/97/5b2897136055d671187c00424e81d118.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.2);
+">
+</div>
+      </div>
+      <div class="prod-info">
+        <h3>Nocturnal Velvet Gown</h3>
+        <div class="prod-foot"><span>₱8,200</span><button onclick="addToCart(this,'Nocturnal Velvet Gown',8200)">Add to Bag</button></div>
+      </div>
+    </div>
+    <div class="prod-card gothic-card">
+       <div class="prod-img"><div style="
+  width:100%;
+  height:280px;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.2), rgba(34, 8, 51, 0.5)), url('https://raw.githubusercontent.com/rgruiz2029/jbghbrvbfbg/refs/heads/main/Screenshot%202026-04-27%20203813.png');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.2);
+">
+</div>
+      </div>
+      <div class="prod-info">
+        <h3>Raven Wing Corset</h3>
+        <div class="prod-foot"><span>₱4,500</span><button onclick="addToCart(this,'Raven Wing Corset',4500)">Add to Bag</button></div>
+      </div>
+    </div>
+    <div class="prod-card gothic-card">
+     <div class="prod-img">
+  <div style="
+    width:100%;
+    height:280px;
+    background:
+      linear-gradient(to top, rgba(0,0,0,0.2), rgba(34, 8, 51, 0.5)), 
+      url('https://i.pinimg.com/736x/32/26/43/32264397ac272a22522d191c2bcaf5fb.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(1.2);
+">
+</div>
+      </div>
+      <div class="prod-info">
+        <h3>Moonlight Shadow Cape</h3>
+        <div class="prod-foot"><span>₱5,900</span><button onclick="addToCart(this,'Moonlight Shadow Cape',5900)">Add to Bag</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-barrier">
+  <span>The Obsidian Archive</span>
+</div>
+
+<section class="section gothic-dark-bg">
+  <div class="prod-grid">
+    <div class="prod-card gothic-card">
+     <div class="prod-img"><div style="
+  width:100%;
+  height:280px;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.2), rgba(34, 8, 51, 0.5)), url('https://i.pinimg.com/1200x/1c/e4/87/1ce487b6da371b8cf23d11e1340d2c1f.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.2);
+">
+</div>
+      </div>
+      <div class="prod-info">
+        <h3>Obsidian Lace</h3>
+        <div class="prod-foot"><span>₱3,200</span><button onclick="addToCart(this,'Obsidian Lace Veil',3200)">Add to Bag</button></div>
+      </div>
+    </div>
+    <div class="prod-card gothic-card">
+         <div class="prod-img"><div style="
+  width:100%;
+  height:280px;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.2), rgba(34, 8, 51, 0.5)), url('https://raw.githubusercontent.com/rgruiz2029/jbghbrvbfbg/refs/heads/main/fa337b96a5f0712f8a8ddf94e9f1fac5.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.2);
+">
+</div>
+      </div>
+      <div class="prod-info">
+        <h3>Funeral Rose Gown</h3>
+        <div class="prod-foot"><span>₱9,500</span><button onclick="addToCart(this,'Funeral Rose Gown',9500)">Add to Bag</button></div>
+      </div>
+    </div>
+    <div class="prod-card gothic-card">
+              <div class="prod-img"><div style="
+  width:100%;
+  height:280px;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.2), rgba(34, 8, 51, 0.5)), url('https://i.pinimg.com/736x/39/e0/de/39e0dec56d4bbc45eb645dce354bd338.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.2);
+">
+</div>
+      </div>
+      <div class="prod-info">
+        <h3>Eldritch Silk Dress</h3>
+        <div class="prod-foot"><span>₱7,800</span><button onclick="addToCart(this,'Eldritch Silk Dress',7800)">Add to Bag</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="logo">Aurevienne</p>
+  <p class="tag">Gato, Patawaran, Ruiz</p>
+</footer>
+
+<script src="cart.js"></script> </body>
+</html>

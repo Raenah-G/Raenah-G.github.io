@@ -1,0 +1,113 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurevienne &ndash; Where Fantasy Becomes Fashion</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+<nav>
+  <div class="logo">Aurevienne</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="disney.html">Disney</a>
+    <a href="bridgerton.html">Bridgerton</a>
+    <a href="mythology.html">Mythology</a>
+    <a href="gothic.html">Gothic</a>
+    <a href="about.html" class="active">About</a>
+  </div>
+  <button class="cart-btn" onclick="openCart()">
+    Bag (<span id="cart-count">0</span>)
+  </button>
+</nav>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-top">
+    <h3>Your Bag</h3>
+    <button onclick="closeCart()">&#x2715;</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="total-price">&#8369;0</strong>
+    </div>
+    <button class="checkout-btn" onclick="document.getElementById('checkout-form-wrap').classList.toggle('show')">Checkout</button>
+    <div class="checkout-form-wrap" id="checkout-form-wrap">
+      <form action="http://52.74.133.173/cs3/checkout.php" method="POST">
+        <input type="text" name="cust_name" id="cust_name" placeholder="Full Name" required>
+        <input type="email" name="cust_email" id="cust_email" placeholder="Email Address" required>
+        <input type="text" name="cust_addr" id="cust_addr" placeholder="Delivery Address" required>
+        <input type="hidden" name="cust_order" id="cust_order" value="[]">
+        <input type="hidden" name="cust_total" id="cust_total" value="0">
+        <button type="submit" class="place-order-btn">Place Order</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="section author-section">
+  <div class="blurred-bg"></div>
+  <div class="author-content">
+    <p class="tag" style="color: #fff;">THE CREATORS</p>
+    <h2 style="color: #fff;">About the Authors</h2>
+    <div class="slider-container">
+      <div class="slider author-glass">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <div class="slides">
+          <div class="slide">
+            <img src="https://raw.githubusercontent.com/rgruiz2029/jbghbrvbfbg/refs/heads/main/675115059_4443318205945238_7640585534519752064_n%20(1).jpg" alt="Gato">
+            <div class="author-info">
+              <p class="role">Lead Designer</p>
+              <h3>Gato</h3>
+              <p class="bio">Bringing digital dreams to life through elegant code and visionary aesthetics.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="https://raw.githubusercontent.com/rgruiz2029/jbghbrvbfbg/refs/heads/main/682795055_1288789059386775_5549113440315385337_n%20(1).jpg" alt="Patawaran">
+            <div class="author-info">
+              <p class="role">Creative Director</p>
+              <h3>Patawaran</h3>
+              <p class="bio">Curating the essence of fantasy to create a timeless fashion experience.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="https://raw.githubusercontent.com/rgruiz2029/jbghbrvbfbg/refs/heads/main/Screenshot%202026-04-27%20212903.png" alt="Ruiz">
+            <div class="author-info">
+              <p class="role">Head Stylist</p>
+              <h3>Ruiz</h3>
+              <p class="bio">The hand behind the details, ensuring every piece tells a unique story.</p>
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="arrow-set" id="set1">
+            <label for="slide3" class="prev">&#10094;</label>
+            <label for="slide2" class="next">&#10095;</label>
+          </div>
+          <div class="arrow-set" id="set2">
+            <label for="slide1" class="prev">&#10094;</label>
+            <label for="slide3" class="next">&#10095;</label>
+          </div>
+          <div class="arrow-set" id="set3">
+            <label for="slide2" class="prev">&#10094;</label>
+            <label for="slide1" class="next">&#10095;</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="logo">Aurevienne</p>
+  <p class="tag">Gato, Patawaran, Ruiz</p>
+</footer>
+
+<script src="cart.js"></script>
+</body>
+</html>

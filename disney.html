@@ -1,0 +1,168 @@
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney Collection &ndash; Aurevienne</title>
+  <link rel="stylesheet" href="disney.css">
+</head>
+<body>
+<nav>
+  <div class="logo">Aurevienne</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="disney.html" class="active">Disney</a>
+    <a href="bridgerton.html">Bridgerton</a>
+    <a href="mythology.html">Mythology</a>
+    <a href="gothic.html">Gothic</a>
+    <a href="about.html">About</a>
+  </div>
+  <button class="cart-btn" onclick="openCart()">
+    Bag (<span id="cart-count">0</span>)
+  </button>
+</nav>
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-top">
+    <h3>Your Bag</h3>
+    <button onclick="closeCart()">&#x2715;</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="total-price">&#8369;0</strong>
+    </div>
+    <button class="checkout-btn" onclick="document.getElementById('checkout-form-wrap').classList.toggle('show')">Checkout</button>
+    <div class="checkout-form-wrap" id="checkout-form-wrap">
+      <form action="http://52.74.133.173/cs3/checkout.php" method="POST">
+        <input type="text" name="cust_name" id="cust_name" placeholder="Full Name" required>
+        <input type="email" name="cust_email" id="cust_email" placeholder="Email Address" required>
+        <input type="text" name="cust_addr" id="cust_addr" placeholder="Delivery Address" required>
+        <input type="hidden" name="cust_order" id="cust_order" value="[]">
+        <input type="hidden" name="cust_total" id="cust_total" value="0">
+        <button type="submit" class="place-order-btn">Place Order</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="tag">AUREVIENNE &mdash; DISNEY</p>
+    <h1>Once Upon<br><em>a Gown</em></h1>
+    <p class="sub">Princess-inspired couture for your fairytale moment.</p>
+    <a href="about.html" class="btn">ABOUT</a>
+  </div>
+</section>
+<div class="shop-intro">
+  <p class="tag">DISNEY COLLECTION</p>
+  <h2>Princess Couture</h2>
+  <p>A tribute to the princesses who shaped our dreams. Each gown is inspired by the magic, elegance, and story of your favourite Disney heroine.</p>
+</div>
+<div class="dress-grid">
+  <div class="dress-card">
+    <div class="dress-img cinde-1">
+      <img src="https://media.glamour.com/photos/589c91f681e7104913cf2006/master/w_2560%2Cc_limit/cinderella-wedding-dress-social.jpg">
+      <button class="quick-add" onclick="addToCart(this,'Midnight Spell Ballgown',7200)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Cinderella</span>
+      <h3>Midnight Spell Ballgown</h3>
+      <span class="dress-price">&#8369;7,200</span>
+    </div>
+  </div>
+  <div class="dress-card">
+    <div class="dress-img cinde-2">
+      <img src="https://i.pinimg.com/originals/5d/79/17/5d79172d21b46168204b01dc10cfba7f.jpg">
+      <button class="quick-add" onclick="addToCart(this,'Lantern Glow Gown',6500)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Rapunzel</span>
+      <h3>Lantern Glow Gown</h3>
+      <span class="dress-price">&#8369;6,500</span>
+    </div>
+  </div>
+  <div class="dress-card">
+    <div class="dress-img cinde-3">
+      <img src="https://i.etsystatic.com/iap/8f22dd/6439280125/iap_640x640.6439280125_2paz2eoj.jpg?version=0" alt="Bibbidi Tulle Dress">
+      <button class="quick-add" onclick="addToCart(this,'Bibbidi Tulle Dress',5900)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Cinderella</span>
+      <h3>Bibbidi Tulle Dress</h3>
+      <span class="dress-price">&#8369;5,900</span>
+    </div>
+  </div>
+  <div class="dress-card">
+    <div class="dress-img aurora-1">
+      <img src="https://i.pinimg.com/736x/a4/d0/af/a4d0afb17f19663b6d377edbbcdaf389.jpg" alt="Bayou Blossom Gown">
+      <button class="quick-add" onclick="addToCart(this,'Bayou Blossom Gown',6200)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Tiana</span>
+      <h3>Bayou Blossom Gown</h3>
+      <span class="dress-price">&#8369;6,200</span>
+    </div>
+  </div>
+  <div class="dress-card">
+    <div class="dress-img aurora-2">
+      <img src="https://i.redd.it/bww5xjy9f6y91.jpg" alt="Enchanted Slumber Gown">
+      <button class="quick-add" onclick="addToCart(this,'Enchanted Slumber Gown',5600)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Aurora</span>
+      <h3>Enchanted Slumber Gown</h3>
+      <span class="dress-price">&#8369;5,600</span>
+    </div>
+  </div>
+  <div class="dress-card">
+    <div class="dress-img aurora-3">
+      <img src="https://i.pinimg.com/736x/f2/f7/42/f2f742274a2c44ec3ea6863d269f0ac0.jpg" alt="Golden Rose Ballgown">
+      <button class="quick-add" onclick="addToCart(this,'Golden Rose Ballgown',7000)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Belle</span>
+      <h3>Golden Rose Ballgown</h3>
+      <span class="dress-price">&#8369;7,000</span>
+    </div>
+  </div>
+  <div class="dress-card">
+    <div class="dress-img belle-1">
+      <img src="https://i.etsystatic.com/11654563/r/il/f91b12/1360228724/il_fullxfull.1360228724_6v0i.jpg" alt="Mermaid Lagoon Gown">
+      <button class="quick-add" onclick="addToCart(this,'Mermaid Lagoon Gown',7800)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Ariel</span>
+      <h3>Mermaid Lagoon Gown</h3>
+      <span class="dress-price">&#8369;7,800</span>
+    </div>
+  </div>
+  <div class="dress-card">
+    <div class="dress-img belle-2">
+      <img src="https://i.etsystatic.com/17840361/r/il/2174a2/3964449397/il_570xN.3964449397_az9d.jpg" alt="Enchanted Forest Dress">
+      <button class="quick-add" onclick="addToCart(this,'Enchanted Forest Dress',6300)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Snow White</span>
+      <h3>Enchanted Forest Dress</h3>
+      <span class="dress-price">&#8369;6,300</span>
+    </div>
+  </div>
+  <div class="dress-card">
+    <div class="dress-img belle-3">
+      <img src="https://i.pinimg.com/originals/5f/27/a1/5f27a10271db845f75bbb252c9fea222.jpg" alt="Blossom Warrior Dress">
+      <button class="quick-add" onclick="addToCart(this,'Blossom Warrior Dress',5700)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Mulan</span>
+      <h3>Blossom Warrior Dress</h3>
+      <span class="dress-price">&#8369;5,700</span>
+    </div>
+  </div>
+</div>
+<footer>
+  <p class="logo">Aurevienne</p>
+  <p class="tag">Gato, Patawaran, Ruiz</p>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>

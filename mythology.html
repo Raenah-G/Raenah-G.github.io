@@ -1,0 +1,185 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythological Collection | Aurevienne</title>
+    <link rel="stylesheet" href="mythology.css"> </head>
+<body>
+
+<nav>
+  <div class="logo">Aurevienne</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="disney.html">Disney</a>
+    <a href="bridgerton.html">Bridgerton</a>
+    <a href="mythology.html" class="active">Mythology</a>
+    <a href="gothic.html">Gothic</a>
+    <a href="about.html">About</a>
+  </div>
+  <button class="cart-btn" onclick="openCart()">
+    Bag (<span id="cart-count">0</span>)
+  </button>
+</nav>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-top">
+    <h3>Your Bag</h3>
+    <button onclick="closeCart()">&#x2715;</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="total-price">&#8369;0</strong>
+    </div>
+    <button class="checkout-btn" onclick="document.getElementById('checkout-form-wrap').classList.toggle('show')">Checkout</button>
+    <div class="checkout-form-wrap" id="checkout-form-wrap">
+      <form action="http://52.74.133.173/cs3/checkout.php" method="POST">
+        <input type="text" name="cust_name" id="cust_name" placeholder="Full Name" required>
+        <input type="email" name="cust_email" id="cust_email" placeholder="Email Address" required>
+        <input type="text" name="cust_addr" id="cust_addr" placeholder="Delivery Address" required>
+        <input type="hidden" name="cust_order" id="cust_order" value="[]">
+        <input type="hidden" name="cust_total" id="cust_total" value="0">
+        <button type="submit" class="place-order-btn">Place Order</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="gothic-hero">
+  <div class="hero-text">
+    <p class="tag" style="color: #d4af37;">THE COLLECTION</p>
+    <h1 style="font-family: Google Sans; margin-top: 10px;">Mythological<br><em>Pantheon</em></h1>
+    <p class="sub">Myths, marble, and legendary grandeur.</p>
+  </div>
+</section>
+
+<div class="gold-barrier">
+  <span>The Age of Olympus</span>
+</div>
+
+<section class="section gothic-dark-bg">
+  <div class="prod-grid">
+    <div class="prod-card gothic-card">
+      <div class="prod-img"><div style="
+  width:100%;
+  height:280px;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.2), rgba(34, 8, 51, 0.5)),
+    url('https://raw.githubusercontent.com/Raenah-G/Raenah-G.github.io/main/myth1.webp');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.2);
+">
+</div>
+      </div>
+      <div class="prod-info">
+        <h3>Gaia’s Vestment</h3>
+        <div class="prod-foot"><span>₱9,400</span><button onclick="addToCart(this,'Gaias Vestment',9400)">Add to Bag</button></div>
+      </div>
+    </div>
+    <div class="prod-card gothic-card">
+     <div class="prod-img">
+  <div style="
+    width:100%;
+    height:280px;
+    background:
+      linear-gradient(to top, rgba(0,0,0,0.2), rgba(34, 8, 51, 0.5)), url('https://i.pinimg.com/736x/e9/3e/7f/e93e7fd749dc5663ce51897ca8306936.jpg');
+    background-size: cover;
+    background-position: center;
+  ">
+  </div>
+</div>
+      <div class="prod-info">
+        <h3>The Naiad's waves</h3>
+        <div class="prod-foot"><span>₱11,200</span><button onclick="addToCart(this,'The Naiads waves',11200)">Add to Bag</button></div>
+      </div>
+    </div>
+    <div class="prod-card gothic-card">
+      <div class="prod-img">
+  <div style="
+    width:100%;
+    height:280px;
+    background:
+      linear-gradient(to top, rgba(0,0,0,0.25), rgba(10, 10, 25, 0.7)), url('https://i.pinimg.com/736x/1e/46/e6/1e46e68189377d8c3a70af6597153d66.jpg');
+    background-size: cover;
+    background-position: center;
+  ">
+  </div>
+</div>
+      <div class="prod-info">
+        <h3>The Helio's Radiance Gown</h3>
+        <div class="prod-foot"><span>₱10,900</span><button onclick="addToCart(this,'The Helios Radiance Gown',10900)">Add to Bag</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-barrier">
+  <span>Mythos and Majesty</span>
+</div>
+
+<section class="section gothic-dark-bg">
+  <div class="prod-grid">
+    <div class="prod-card gothic-card">
+      <div class="prod-img">
+  <div style="
+    width:100%;
+    height:280px;
+    background:
+      linear-gradient(to top, rgba(0,0,0,0.25), rgba(10, 10, 25, 0.7)),   url('https://i.pinimg.com/736x/54/5b/00/545b003387bab87c21f48cc4066b8ea1.jpg');
+    background-size: cover;
+    background-position: center;
+  ">
+  </div>
+</div>
+      <div class="prod-info">
+        <h3>The Nebulight Veil</h3>
+        <div class="prod-foot"><span>₱10,200</span><button onclick="addToCart(this,'The Nebulight Veil',10200)">Add to Bag</button></div>
+      </div>
+    </div>
+    <div class="prod-card gothic-card">
+           <div class="prod-img">
+  <div style="
+    width:100%;
+    height:280px;
+    background:
+      linear-gradient(to top, rgba(0,0,0,0.25), rgba(10, 10, 25, 0.7)),   url('https://i.pinimg.com/736x/af/42/b5/af42b565aa5a5e07edc1cf9986d7cf5f.jpg');
+    background-size: cover;
+    background-position: center;
+  ">
+  </div>
+</div>
+      <div class="prod-info">
+        <h3>Athena's Silk Gown</h3>
+        <div class="prod-foot"><span>₱7,200</span><button onclick="addToCart(this,'Athenas Silk Gown',7200)">Add to Bag</button></div>
+      </div>
+    </div>
+    <div class="prod-card gothic-card">
+                <div class="prod-img">
+  <div style="
+    width:100%;
+    height:280px;
+    background:
+      linear-gradient(to top, rgba(0,0,0,0.25), rgba(10, 10, 25, 0.7)),   url('https://i.pinimg.com/736x/fe/ad/9a/fead9a6bda8b7f0b46eb7182d3cde4cc.jpg');
+    background-size: cover;
+    background-position: center;
+  ">
+  </div>
+</div>
+      <div class="prod-info">
+        <h3>The Ignis Bloom</h3>
+        <div class="prod-foot"><span>₱7,800</span><button onclick="addToCart(this,'The Ignis Bloom',7800)">Add to Bag</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="logo">Aurevienne</p>
+  <p class="tag">Gato, Patawaran, Ruiz</p>
+</footer>
+
+<script src="cart.js"></script> </body>
+</html>
